@@ -17,8 +17,7 @@ public class Checker {
 	public static void main(String[] args) {
 		
 		Checker c=new Checker();
-		
-		List<String> lo=new ArrayList<>();
+				List<String> lo=new ArrayList<>();
 		lo.add("revenge");
 		Set<String> s=new HashSet<>();
 		s.add("Time");
