@@ -8,11 +8,11 @@ import java.util.Iterator;
 public class Idea {
 	public void finalize() {
 		System.out.println("Garbage");
-		// TODO Auto-generated method stub
 
 	}
 	public static void main(String[] args) {
 		Collection<String> s2=new ArrayList<>();
+
 		Idea id =new Idea();
 		Idea id1 =new Idea();
 		id1=null;
