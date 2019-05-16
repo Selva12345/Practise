@@ -22,6 +22,7 @@ public class Checker {
 		Set<String> s = new HashSet<>();
 		s.add("Time");
 		s.add("Time");
+		
 		List<String> lol = Collections.synchronizedList(lo);
 		System.out.println(lol);
 
