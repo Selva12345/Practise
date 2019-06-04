@@ -8,8 +8,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.ThreadFactory;
 
-public class MyCallable implements Callable<String> {
+public class MyCallable implements Callable<String>,ThreadFactory {
 
     public MyCallable(int i) {
 		// TODO Auto-generated constructor stub
@@ -25,13 +26,13 @@ public class MyCallable implements Callable<String> {
     
     public static void main(String args[]){
         //Get ExecutorService from Executors utility class, thread pool size is 10
-        ExecutorService executor = Executors.newFixedThreadPool(10);
+        ExecutorService executor = Executors.newScheduledThreadPool(2);
         //create a list to hold the Future object associated with Callable
         List<Future<String>> list = new ArrayList<Future<String>>();
         //Create MyCallable instance
         Callable<String> callable = new MyCallable(4);
         		callable	=new MyCallable(5);
-        for(int i=0; i< 100; i++){
+        for(int i=0; i< 12; i++){
             //submit Callable tasks to be executed by thread pool
             Future<String> future = executor.submit(callable);
             //add Future to the list, we can get return value using Future
@@ -51,5 +52,11 @@ public class MyCallable implements Callable<String> {
         //shut down the executor service now
         executor.shutdown();
     }
+
+	@Override
+	public Thread newThread(Runnable arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
