@@ -1,9 +1,15 @@
 package com.rebirth;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Test {
 	public static void main(String[] args) {
@@ -26,6 +32,14 @@ public class Test {
 		}
 		
 System.out.println(f);
+//Predicate<String> p = st.stream().mapToDouble(arg0); 
+Stream<String> fn=inte.stream().filter(s->s.equals(""));
+
+//inte.stream().flatMap(Collection::stream).collect(Collectors.toList());
+List<List<String>> list = Arrays.asList(
+		  Arrays.asList("a"),
+		  Arrays.asList("b"));
+System.out.println(list.stream().flatMap(Collection::stream).collect(Collectors.toList()));
 	}
 
 }
