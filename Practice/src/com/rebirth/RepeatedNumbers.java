@@ -14,7 +14,6 @@ public static void main(String[] args) {
 private static void repeat(Integer[] arr) {
 	List<Integer> li=new ArrayList<>(Arrays.asList(arr));
 	ArrayList ar=new ArrayList();
-	
 	int temp=0;
 	int value=0;
 	
