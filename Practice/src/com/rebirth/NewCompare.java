@@ -6,12 +6,12 @@ import java.util.Comparator;
 import java.util.List;
 
 public class NewCompare {
-	
+	// NOTE: caps and small letters will compared in different ways
 	public static void main(String[] args) {
 		List<obj> li=new ArrayList<>();
-		li.add(new obj("Paul Walker","24","Porsche","Audi"));
-		li.add(new obj("David Beckham","25","VolksWagen","Maruthi"));
-		li.add(new obj("Brat Pitt","7","Nissan","Skyline"));
+		li.add(new obj("PaulWalker","24","Porsche","Audi"));
+		li.add(new obj("DavidBeckham","25","VolksWagen","Maruthi"));
+		li.add(new obj("FratPitt","7","Nissan","Skyline"));
 values v=new values();
 		Collections.sort(li,v);
 		for (obj obj : li) {
@@ -71,13 +71,22 @@ class obj implements Comparable<obj>{
 	
 	
 }
+ class comparison implements Comparable<obj> {
+
+	@Override
+	public int compareTo(obj arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
 class values implements Comparator<obj>{
 
 	
 
 	@Override
 	public int compare(obj arg0, obj arg1) {
-		return arg0.getId().compareTo(arg1.getId()); 
+		return arg0.getName().compareTo(arg1.getName()); 
 	}
 	
 }
