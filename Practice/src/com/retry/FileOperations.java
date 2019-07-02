@@ -1,5 +1,6 @@
 package com.retry;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,6 +23,7 @@ public static void main(String[] args) {
 		fi.read();
 		FileOutputStream fo=new FileOutputStream("D://Testing.txt");
 		fo.write("Hello Paul Walker".getBytes());
+		
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

@@ -34,9 +34,9 @@ class Price{
     }
      
     public int hashCode(){
-        System.out.println("In hashcode");
+     System.out.println("In hashcode");
         int hashcode = 0;
-        hashcode = price*20;
+        hashcode = price*37;
         hashcode += item.hashCode();
      
         return hashcode;

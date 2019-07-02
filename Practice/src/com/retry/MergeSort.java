@@ -15,7 +15,7 @@ public class MergeSort {
 			merge(A, start, mid, end);
 		}
 	}
-
+//int arr[] = { 12, 11, 13, 5, 6, 7, 16 };
 	void merge(int A[ ] , int start, int mid, int end) {
 		 //stores the starting position of both parts in temporary variables.
 		int p = start ,q = mid+1;
