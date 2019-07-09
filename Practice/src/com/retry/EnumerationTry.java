@@ -15,8 +15,9 @@ public static void main(String[] args) {
 	ht.put("Wats up","2");
 ht.keySet();
 	Enumeration<String> e=ht.elements();
+	Enumeration<String> e1=ht.keys();
 	while(e.hasMoreElements()) {
-			System.out.println(e.nextElement());
+			System.out.println(e.nextElement()+" : "+e1.nextElement());
 	}
 }
 }

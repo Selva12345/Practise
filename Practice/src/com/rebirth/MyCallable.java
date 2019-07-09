@@ -14,7 +14,7 @@ public class MyCallable implements Callable<String>,ThreadFactory {
 
     public MyCallable(int i) {
 		// TODO Auto-generated constructor stub
-    	System.out.println("HI"+i);
+    	//System.out.println("HI"+i);
 	}
 
 	@Override
