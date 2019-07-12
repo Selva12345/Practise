@@ -2,8 +2,8 @@ package com.retry;
 
 public class SortMerge {
 	public static void main(String[] args) {
-		int arr[] = { 12, 11, 13, 5, 6, 7, 16 };
-		sort(arr, 0, arr.length);
+		int arr[] = { 12, 11, 13, 5, 6, 7,5, 16 };
+		sort(arr, 0, arr.length-1);
 		for (int i : arr) {
 			System.out.println(i);
 
@@ -22,19 +22,29 @@ public class SortMerge {
 	}
 
 	private static void merge(int[] arr, int start, int mid, int end) {
-		
-        if(arr[start]>arr[mid]) {
-	   int i=arr[start];
-	   arr[start]=arr[mid];
-	   arr[mid]=i;
-         }
-        if(mid<end) {
-        if(arr[mid]>arr[end-1]) {
-     	   int i=arr[mid];
-     	   arr[mid]=arr[end];
-     	   arr[mid]=i;
-              }
-        }
+		int p=start; int q=mid+1;
+		int a[]=new int[end-start+1];
+		int k=0;
+		for(int i=start;i<=end;i++) {
+			if(p>mid) {
+				a[k++]=arr[q++];
+				
+			}else if(q>end) {
+				a[k++]=arr[p++];
+				
+			}else if(arr[p]<arr[q]) {
+				a[k++]=arr[p++];
+				
+			}else {
+				a[k++]=arr[q++];
+				
+			}
+			
+		}
+		for (int i = 0; i < k; i++) {
+			arr[start++]=a[i];
+		}
+      
 	}
 
 }

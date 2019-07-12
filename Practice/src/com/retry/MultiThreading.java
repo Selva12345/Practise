@@ -22,7 +22,7 @@ System.out.println("Inside here");
 			}
 		});
 		List<String> li=new ArrayList<String>();
-	Callable<String> c= new Idea(1, "hello");
+	Idea  c= new Idea(1, "hello");
 	c=new Idea(3,"gr");
 	
 	
