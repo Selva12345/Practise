@@ -26,10 +26,9 @@ class Trees {
 			return 0;
 		}
 			
-		h++;
 		evaluate(value.left);
-		l++;
 		evaluate(value.right);
+		
 		
 		return h;
 		
