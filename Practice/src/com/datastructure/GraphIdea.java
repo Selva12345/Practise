@@ -15,7 +15,6 @@ public class GraphIdea {
 	}
 	public static void main(String[] args) {
 		GraphIdea g=new GraphIdea(4);
-
         g.addEdge(0, 1); 
         g.addEdge(0, 2); 
         g.addEdge(1, 2); 
