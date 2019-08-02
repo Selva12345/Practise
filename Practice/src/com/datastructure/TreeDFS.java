@@ -1,5 +1,7 @@
 package com.datastructure;
 
+import com.practice.waste.Node;
+
 public class TreeDFS {
 	Node root;
 	private void printPreorder(Node node) {
