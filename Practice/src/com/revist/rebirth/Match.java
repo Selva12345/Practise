@@ -20,19 +20,22 @@ public static void main(String[] args) {
 	mp.put("Cricket", "Dhoni");
 	mp.put("Tripchange","Paul Milradt");
 	mp.forEach((s1,s2)->System.out.println(s1+" "+s2));
+	FootBall fb2=(s3)->{
+		System.out.println(s3+"Hello" + hi());
+		return s3;
+		
+	};
+	//FootBall fv=s->m.pointsw(s+"good");
+	System.out.println(fb2.points("sd"));
 	
-	FootBall fv=s->m.pointsw(s);
-	System.out.println(fv.points("sd"));
+	System.out.println();
+	
 }
 private  String pointsw(String s) {
 	return s;
 }
-FootBall fb2=(s3)->{
-	System.out.println("Hello");
-	return s3;
-	
-};
- String  hi() {
+
+ static String  hi() {
 	return null;
 }
 }
